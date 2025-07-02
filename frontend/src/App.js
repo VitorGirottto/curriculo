@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/layout/Navigation";
 import CyberEffects from "./components/effects/CyberEffects";
 import Profile from "./pages/Profile";
@@ -11,7 +11,7 @@ import Projects from "./pages/Projects";
 function App() {
   return (
     <div className="App min-h-screen bg-black text-white relative overflow-x-hidden">
-      <BrowserRouter>
+      <HashRouter>
         {/* Cyber Effects Background */}
         <CyberEffects />
         
@@ -27,7 +27,7 @@ function App() {
             <Route path="/projetos" element={<Projects />} />
           </Routes>
         </main>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
